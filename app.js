@@ -2,8 +2,15 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
+app.get('/', (req, res) => {
+  res.json({ message: `Hello World!` });
+});
 
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+})
 
+ 
 
 
 
