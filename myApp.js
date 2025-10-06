@@ -13,6 +13,7 @@ app.get('index.html', function(req, res) {
   res.sendFile("views" + "/" + "index.html");
 });
 
+app.use(helmet());
 
 
 
