@@ -2,14 +2,13 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.json({ message: `Hello World!` });
+app.get('style.css', function(req, res) {
+  res.sendFile("public" + "/" + "style.css");
 });
 
-
-
-
-
+app.get('index.html', function(req, res) {
+  res.sendFile("views" + "/" + "index.html");
+});
 
 
 
