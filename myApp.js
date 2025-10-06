@@ -1,6 +1,9 @@
 const express = require('express');
 const helmet = require('helmet');
 const app = express();
+const router = express.Router();
+
+module.exports = router;
 
 app.get('style.css', function(req, res) {
   res.sendFile("public" + "/" + "style.css");
